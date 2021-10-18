@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  background: #ffffff;
+  position: relative;
+}
+
+.navbar-logo {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+
+  transform: translateY(-50%);
+}
