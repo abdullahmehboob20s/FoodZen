@@ -7,7 +7,7 @@ function Wrapper(props) {
   return (
     <>
       <Navbar />
-      <div className="page-body row">
+      <div className="page-body">
         <Sidebar />
         <BgGrayComponent styles={props.bodyStyles}>
           {props.children}
