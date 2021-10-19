@@ -1,0 +1,25 @@
+.dropdowns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*  */
+.dishes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 22px;
+}
+
+/*  */
+.search-result-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+}
+
+.serach-result-card-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

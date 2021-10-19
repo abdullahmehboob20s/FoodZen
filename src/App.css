@@ -24,6 +24,7 @@
   --font-size-9px: 0.563rem;
 
   --clr-black: #000000;
+  --clr-black-2: #222222;
   --clr-light-black: #333333;
   --clr-white: #ffffff;
   --clr-green: #7aaf81;
@@ -45,6 +46,9 @@ a {
 /* font-colors */
 .black {
   color: var(--clr-black);
+}
+.black-2 {
+  color: var(--clr-black-2);
 }
 .light-black {
   color: var(--clr-light-black);
@@ -150,6 +154,9 @@ a {
 }
 .row.justify-between {
   justify-content: space-between;
+}
+.row.align-center {
+  align-items: center;
 }
 .flex-1 {
   flex: 1;

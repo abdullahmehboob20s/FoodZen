@@ -2,10 +2,21 @@ import React from "react";
 import "./TitleBar.css";
 
 function TitleBar(props) {
+  let {
+    fontSize = "fs-18px",
+    weight = "weight-7",
+    color = "black-2",
+    style,
+    title,
+    img,
+  } = props;
   return (
-    <div className="food-item-card-title fs-18px weight-7 mb-15">
-      {props.img}
-      {props.title}
+    <div
+      className={`food-item-card-title ${color} ${fontSize} ${weight}`}
+      style={style}
+    >
+      {img}
+      {title}
     </div>
   );
 }

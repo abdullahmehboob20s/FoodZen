@@ -50,15 +50,19 @@ function Home() {
           <div className="food-item-cards">
             <div className="food-item-card">
               <div className="mb-20">
-                <TitleBar
-                  img={<img src={cusineIcon} alt="" />}
-                  title="Cusine"
-                />
+                <div className="mb-15">
+                  <TitleBar
+                    img={<img src={cusineIcon} alt="" />}
+                    title="Cusine"
+                  />
+                </div>
 
                 <div className="row gap-10px ">
                   <CircleCard
                     content={<img src={indiaFlag} alt="" />}
-                    title="Indian"
+                    title={
+                      <p className="fs-16px weight-4 light-black">Indian</p>
+                    }
                     style={{
                       background:
                         "radial-gradient(50% 50% at 50% 50%, rgba(255, 152, 17, 0.1) 0%, rgba(109, 165, 68, 0.1) 100%)",
@@ -66,7 +70,9 @@ function Home() {
                   />
                   <CircleCard
                     content={<img src={italyFlag} alt="" />}
-                    title="Italian"
+                    title={
+                      <p className="fs-16px weight-4 light-black">Italian</p>
+                    }
                     style={{
                       background:
                         "radial-gradient(50% 50% at 50% 50%, rgba(255, 152, 17, 0.1) 0%, rgba(109, 165, 68, 0.1) 100%)",
@@ -77,10 +83,12 @@ function Home() {
               {/*  */}
 
               <div className="mb-10">
-                <TitleBar
-                  img={<img src={categoryIcon} alt="" />}
-                  title="Category"
-                />
+                <div className="mb-15">
+                  <TitleBar
+                    img={<img src={categoryIcon} alt="" />}
+                    title="Category"
+                  />
+                </div>
 
                 <div className="row gap-10px ">
                   <CircleCard
@@ -96,22 +104,26 @@ function Home() {
 
               {/*  */}
               <div className="mb-10">
-                <TitleBar
-                  img={<img src={courseIcon} alt="" />}
-                  title="Course"
-                />
+                <div className="mb-15">
+                  <TitleBar
+                    img={<img src={courseIcon} alt="" />}
+                    title="Course"
+                  />
+                </div>
 
                 <div className="row gap-10px mb-10">
                   <CircleCard
                     content={<img src={beaf} alt="" />}
-                    title="Main"
+                    title={<p className="fs-16px weight-4 light-black">Main</p>}
                     style={{ border: "1.5px solid #E9B699" }}
                   />
                 </div>
               </div>
             </div>
             <div className="food-item-card">
-              <TitleBar title="Overview" />
+              <div className="mb-15">
+                <TitleBar title="Overview" />
+              </div>
               <div className="overview-cards mb-40">
                 <OverViewCard
                   img={clock}
@@ -126,11 +138,12 @@ function Home() {
               </div>
 
               {/*  */}
-
-              <TitleBar
-                img={<img src={cookBook} alt="" />}
-                title="Recipe Link"
-              />
+              <div className="mb-15">
+                <TitleBar
+                  img={<img src={cookBook} alt="" />}
+                  title="Recipe Link"
+                />
+              </div>
 
               <RecipeCard img={cookerHat} title="Restaurant" />
             </div>

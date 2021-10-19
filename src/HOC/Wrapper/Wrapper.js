@@ -4,11 +4,12 @@ import Sidebar from "layouts/Sidebar/Sidebar";
 import React from "react";
 
 function Wrapper(props) {
+  let { showSidebar = true, focus } = props;
   return (
     <>
-      <Navbar />
+      <Navbar focus={focus} />
       <div className="page-body">
-        <Sidebar />
+        {showSidebar ? <Sidebar /> : ""}
         <BgGrayComponent styles={props.bodyStyles}>
           {props.children}
         </BgGrayComponent>
