@@ -19,7 +19,6 @@ function SearchPage() {
       bodyStyles={{
         padding: "15px 1.875rem",
         marginTop: "72px",
-        paddingLeft: "170px",
       }}
     >
       <div className="dropdowns mb-30">

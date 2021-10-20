@@ -5,7 +5,7 @@ function CookingProcessCard(props) {
   return (
     <div className="cooking-process-card">
       <div>
-        <div className="cooking-process-count">{props.order + 1}</div>
+        <div className="cooking-process-count fs-25px">{props.order + 1}</div>
       </div>
       <p className="cooking-process-disc fs-15px light-black weight-4">
         To marinate the chicken for the biryani, combine the vegetable oil,

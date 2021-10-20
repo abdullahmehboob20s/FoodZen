@@ -30,8 +30,9 @@ function Home() {
     <Wrapper
       bodyStyles={{
         padding: "15px 1.875rem",
+        paddingLeft: "clamp(15px , 2.35vw , 31px)",
+        paddingRight: "clamp(15px , 2.35vw , 31px)",
         marginTop: "72px",
-        paddingLeft: "170px",
       }}
     >
       {/* section 1 */}
@@ -150,19 +151,22 @@ function Home() {
           </div>
         </div>
         <div className="food-items-right">
-          <img src={biryani} style={{ width: "250px" }} alt="" />
-
-          <MixtureCard mixtureItems={[dish, dish2]} />
+          <div className="biryani-img">
+            <img src={biryani} style={{ width: "250px" }} alt="" />
+          </div>
+          <div className="mixture-wrapper">
+            <MixtureCard mixtureItems={[dish, dish2]} />
+          </div>
         </div>
       </div>
 
       {/* section 2 */}
-      <div className="mb-80">
+      {/* <div className="mb-80">
         <p className="light-black fs-35px weight-7 mb-15">Ingredients</p>
         <IngredientsCards />
         <IngredientsCards />
         <IngredientsCards />
-      </div>
+      </div> */}
 
       {/* section 3 */}
       <div className="mb-80">
@@ -172,7 +176,7 @@ function Home() {
           <div className="cooking-process-header">
             <p className="fs-25px weight-5 light-black">Marinate</p>
 
-            <div className="cooking-process-btn">
+            <div className="cooking-process-btn fs-15px weight-7">
               <div>1/3</div>
               Next Step
               <ArrowRight />

@@ -13,13 +13,13 @@ function MixtureCard(props) {
         <div className="add-sign"></div>
         <Image img={props.mixtureItems[1]} />
       </div>
-      <div className="mixture-card-title">
+      <div className="mixture-card-title fs-15px">
         Do you think Zucchini is correct ingredients for zucchini fritters?
       </div>
 
       <div className="mixture-card-btns">
-        <button>Yes, I agree</button>
-        <button>No, I don’t</button>
+        <button className="fs-15px">Yes, I agree</button>
+        <button className="fs-15px">No, I don’t</button>
       </div>
     </div>
   );

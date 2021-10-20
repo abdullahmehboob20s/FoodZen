@@ -15,7 +15,7 @@ function BaseSearch() {
   return (
     <Wrapper
       bodyStyles={{
-        padding: " 2.08vw 5vw",
+        padding: "2.08vw 5vw",
         marginTop: "72px",
         backgroundColor: "white",
       }}
@@ -102,8 +102,8 @@ function BaseSearch() {
                   </div>
                 }
                 style={{
-                  width: " 87.42px",
-                  height: " 87.42px",
+                  minWidth: "87.42px",
+                  minHeight: "87.42px",
                   borderRadius: "50%",
                 }}
                 wrapperStyles={{

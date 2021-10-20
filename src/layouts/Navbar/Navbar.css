@@ -27,3 +27,25 @@
   flex-direction: column;
   gap: 30px;
 }
+
+.hamburger-icon {
+  width: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+
+  .navbar-logo {
+    position: static;
+    transform: translateY(0%);
+  }
+}

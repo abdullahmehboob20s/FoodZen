@@ -45,6 +45,23 @@ function IngredientsCards() {
             swiper.navigation.init();
             swiper.navigation.update();
           }}
+          breakpoints={{
+            1000: {
+              slidesPerView: 4,
+            },
+            800: {
+              slidesPerView: 3,
+            },
+            630: {
+              slidesPerView: 3,
+            },
+            500: {
+              slidesPerView: 2,
+            },
+            300: {
+              slidesPerView: 1.5,
+            },
+          }}
         >
           {new Array(10).fill("").map((item, index) => (
             <SwiperSlide>

@@ -1,18 +1,27 @@
+import React from "react";
+import "./Wrapper.css";
 import BgGrayComponent from "components/BgGrayComponent/BgGrayComponent";
 import Navbar from "layouts/Navbar/Navbar";
 import Sidebar from "layouts/Sidebar/Sidebar";
-import React from "react";
 
 function Wrapper(props) {
   let { showSidebar = true, focus } = props;
+  let [sidebarShow, setSidebarShow] = React.useState(false);
+
   return (
     <>
-      <Navbar focus={focus} />
+      <Navbar focus={focus} sidebarState={{ sidebarShow, setSidebarShow }} />
       <div className="page-body">
-        {showSidebar ? <Sidebar /> : ""}
-        <BgGrayComponent styles={props.bodyStyles}>
-          {props.children}
-        </BgGrayComponent>
+        {showSidebar ? (
+          <Sidebar sidebarState={{ sidebarShow, setSidebarShow }} />
+        ) : (
+          ""
+        )}
+        <div className={showSidebar ? `showSidebar` : ""}>
+          <BgGrayComponent styles={props.bodyStyles}>
+            {props.children}
+          </BgGrayComponent>
+        </div>
       </div>
     </>
   );

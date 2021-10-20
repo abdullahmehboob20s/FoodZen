@@ -5,8 +5,10 @@ import measurementIcon from "assets/images/measurement-icon.png";
 function IngredientsCard(props) {
   return (
     <div className="ingredient-card">
-      <div className="ingredient-card-img">
-        <img src={props.img} alt="" />
+      <div>
+        <div className="ingredient-card-img">
+          <img src={props.img} alt="" />
+        </div>
       </div>
       <div className="ingredient-card-content">
         <p className="weight-6 fs-18px ingredient-title">Cardamom</p>

@@ -19,6 +19,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  gap: 1rem;
 }
 
 .mixture-card-images {
@@ -27,14 +29,14 @@
   justify-content: space-between;
 }
 .mixture-card-images img {
-  width: 120px;
-  height: 120px;
+  width: clamp(70px, 8.34vw, 121px);
+  height: clamp(70px, 8.34vw, 121px);
   border-radius: 50%;
   /* border: 2px solid red; */
 }
 .add-sign {
-  width: 36.73px;
-  height: 36.73px;
+  width: clamp(20px, 2.5vw, 37px);
+  height: clamp(20px, 2.5vw, 37px);
 
   position: relative;
 }
@@ -78,7 +80,7 @@
 
   font-style: normal;
   font-weight: bold;
-  font-size: 0.938rem;
+  /* font-size: 0.938rem; */
   line-height: 20px;
 
   text-align: center;
@@ -92,15 +94,16 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .mixture-card-btns button {
   flex: 1;
+  flex-basis: 130px;
 
   padding: 7px 27px;
 
   font-weight: bold;
-  font-size: 15px;
 
   border-radius: 40px;
 
@@ -117,4 +120,13 @@
   background-color: transparent;
   color: white;
   border: 1px solid #ffffff;
+}
+
+@media (max-width: 760px) {
+  .mixture-card {
+    flex: 1;
+    height: 100%;
+
+    padding: 1.8rem 1rem;
+  }
 }
