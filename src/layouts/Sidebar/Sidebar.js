@@ -4,9 +4,25 @@ import { ReactComponent as SearchIcon } from "assets/images/search-icon-2.svg";
 import { Link } from "react-router-dom";
 
 function Sidebar({ sidebarState }) {
-  let { sidebarShow } = sidebarState;
+  let { sidebarShow, setSidebarShow } = sidebarState;
+  let sidebarRef = React.useRef();
+
+  React.useEffect(() => {
+    let handler = (e) => {
+      if (!sidebarRef.current.contains(e.target)) {
+        setSidebarShow(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
+
   return (
     <div
+      ref={sidebarRef}
       className={`sidebar ${
         sidebarShow ? "show" : ""
       } row column justify-between `}

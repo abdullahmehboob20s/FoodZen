@@ -138,3 +138,37 @@
 
   cursor: pointer;
 }
+
+@media (max-width: 1000px) {
+  .dropdown-btn {
+    background: rgba(43, 161, 227, 0.08);
+    border: 0;
+    /* border-top: 2px solid rgba(43, 161, 227, 0.64); */
+    border-bottom: 2px solid rgba(43, 161, 227, 0.64);
+    border-radius: 0px;
+    padding: 12px 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+    /* min-width: 140px; */
+
+    font-weight: 500;
+    font-size: 1rem;
+
+    color: #000000;
+
+    cursor: pointer;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: static;
+    top: 0;
+    background: #ffffff;
+    z-index: 10000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+  }
+}

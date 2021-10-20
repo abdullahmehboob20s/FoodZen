@@ -5,8 +5,12 @@ import TitleBar from "components/TitleBar/TitleBar";
 import Wrapper from "HOC/Wrapper/Wrapper";
 import DishCard from "components/DishCard/DishCard";
 import SearchResultCard from "components/SearchResultCard/SearchResultCard";
+import filterIcon from "assets/images/filter.png";
+import dropdownCrossIcon from "assets/images/cross-icon.png";
 
 function SearchPage() {
+  const [show, setshow] = React.useState(false);
+  const dropdownSidebarRef = React.useRef();
   let searchResult = [
     // {
     //   id: 23572,
@@ -14,21 +18,50 @@ function SearchPage() {
     // },
   ];
 
+  React.useEffect(() => {
+    let handler = (e) => {
+      if (!dropdownSidebarRef.current.contains(e.target)) {
+        setshow(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
+
   return (
     <Wrapper
       bodyStyles={{
-        padding: "15px 1.875rem",
+        padding: "15px 0",
+        paddingLeft: "clamp(15px,2.35vw,31px)",
+        paddingRight: "clamp(15px,2.35vw,31px)",
         marginTop: "72px",
       }}
     >
-      <div className="dropdowns mb-30">
-        <DropDown btnTitle="Ingredients" />
-        <DropDown btnTitle="Cuisine" />
-        <DropDown btnTitle="Ingredients Group" />
-        <DropDown btnTitle="Difficulty" />
-        <DropDown btnTitle="Time" />
-        <DropDown btnTitle="Category" position="right" />
-        <DropDown btnTitle="Course" position="right" />
+      <div className="dropdowns-wrapper">
+        <div
+          className={`dropdowns ${show ? "show" : ""} mb-30`}
+          ref={dropdownSidebarRef}
+        >
+          <img
+            onClick={() => setshow(false)}
+            className="dropdown-cross-icon"
+            src={dropdownCrossIcon}
+            alt=""
+          />
+          <DropDown btnTitle="Ingredients" />
+          <DropDown btnTitle="Cuisine" />
+          <DropDown btnTitle="Ingredients Group" />
+          <DropDown btnTitle="Difficulty" />
+          <DropDown btnTitle="Time" />
+          <DropDown btnTitle="Category" position="right" />
+          <DropDown btnTitle="Course" position="right" />
+        </div>
+        <div className="filter-icon" onClick={() => setshow(!show)}>
+          <img src={filterIcon} alt="" />
+        </div>
       </div>
 
       <div>
