@@ -1,8 +1,8 @@
 import CircleCard from "components/CircleCard/CircleCard";
+import "./BaseSearch.css";
 import TitleBar from "components/TitleBar/TitleBar";
 import Wrapper from "HOC/Wrapper/Wrapper";
 import React from "react";
-import "./BaseSearch.css";
 import foodImage from "assets/images/food.png";
 import fImage from "assets/images/abc.png";
 import arrowRight from "assets/images/icon-arrow-right.png";
