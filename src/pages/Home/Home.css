@@ -106,23 +106,12 @@
   }
 
   .food-items-right {
+    flex-direction: column-reverse;
     width: 100%;
-    gap: 12px;
-    flex-direction: row;
-    margin-top: 0.2rem;
-    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    gap: 1rem;
   }
-}
 
-@media (max-width: 760px) {
-  .biryani-img {
-    flex: 1;
-    flex-basis: 260px;
-  }
-  .mixture-wrapper {
-    flex: 1;
-    flex-basis: 260px;
-  }
   .biryani-img > img {
     width: 100% !important;
   }
