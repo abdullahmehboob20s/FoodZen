@@ -7,6 +7,7 @@ import DishCard from "components/DishCard/DishCard";
 import SearchResultCard from "components/SearchResultCard/SearchResultCard";
 import filterIcon from "assets/images/filter.png";
 import dropdownCrossIcon from "assets/images/cross-icon.png";
+import { Link } from "react-router-dom";
 
 function SearchPage() {
   const [show, setshow] = React.useState(false);
@@ -86,7 +87,9 @@ function SearchPage() {
 
         <div className="dishes">
           {new Array(12).fill("").map((card, index) => (
-            <DishCard />
+            <Link to="/" style={{ color: "inherit" }}>
+              <DishCard />
+            </Link>
           ))}
         </div>
       </div>

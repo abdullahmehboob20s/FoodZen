@@ -161,12 +161,12 @@ function Home() {
       </div>
 
       {/* section 2 */}
-      {/* <div className="mb-80">
+      <div className="mb-80">
         <p className="light-black fs-35px weight-7 mb-15">Ingredients</p>
         <IngredientsCards />
         <IngredientsCards />
         <IngredientsCards />
-      </div> */}
+      </div>
 
       {/* section 3 */}
       <div className="mb-80">
